@@ -18,7 +18,7 @@ Steps to make a django project for the above task:
    ```
    docker cp init.sql <container_name>:/docker-entrypoint-initdb.d/
    ```
-6. Connect Django server to the docker container by modifying settings.py file (Refer: https://github.com/Udit21Ag/cc_backend_task3/blob/00e8137d618f96f73924e0052e69f873192db61d/ccsql/ccsql/settings.py#L83)
+6. Connect Django server to the docker container by modifying settings.py file (Refer: https://github.com/Udit21Ag/cc_backend_task3/blob/6f7c32eb565e2b2e6469375d855f232f3b3adf31/ccsql/ccsql/settings.py#L77-L86C2)
 7. To automatically create table relations as per the File model in models.py (Refer: https://github.com/Udit21Ag/cc_backend_task3/blob/main/ccsql/dbwork/models.py)
    ```
    python manage.py migrate
