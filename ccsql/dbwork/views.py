@@ -12,7 +12,7 @@ def upload(request):
             file_obj.save()
             return JsonResponse({"message": "Successfully uploaded"})
         except:
-            pass
+            return JsonResponse({"message":"Either the file doesn't exist or the URL is wrong"})
 
 def retrieve(request,filename):
     if request.method=="GET":
