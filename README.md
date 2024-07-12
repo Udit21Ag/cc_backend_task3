@@ -27,3 +27,20 @@ Steps to make a django project for the above task:
 9. To upload a file, do a POST request and upload it using request.FILES as it contains all the uploaded files and then, save the file using file.save()
 10. To retrieve a file, do a GET request and retrieve using objects.get(name=filename) (if filename is unique). In case of duplicate files, use objects.filter(name=filename).first()
 11. To delete a file, do a DELETE request and delete all duplicates of a file using objects.filter(name=filename).delete()
+
+12. Run the django project server using:
+   ```
+   python manage.py runserver
+   ```
+13. To upload a file:
+    ```
+     curl -X POST -F "file=@<file_path>" http://localhost:8000/upload/
+    ```
+14. To retrieve a file:
+    ```
+    curl -X GET http://localhost:8000/retrieve/<file_name>/
+    ```
+15. To delete a file:
+    ```
+    curl -X DELETE http://localhost:8000/delete/<file_name>/
+    ```
